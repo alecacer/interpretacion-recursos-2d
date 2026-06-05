@@ -34,15 +34,23 @@ from estimation import estimate_scenario
 
 # ------------------------------------------------------------------
 # Shim de compatibilidad: streamlit-drawable-canvas 0.9.3 usa
-# st_image.image_to_url, que Streamlit >= 1.41 movió a
-# streamlit.elements.lib.image_utils (misma firma posicional).
+# st_image.image_to_url (eliminada en Streamlit >= 1.41) para el fondo
+# del lienzo. En vez de servir el PNG vía el media manager (frágil en
+# despliegues en la nube: el lienzo aparece SIN los sondajes), se
+# entrega la imagen incrustada como data-URI base64, que funciona
+# igual en local y en Streamlit Community Cloud.
 # ------------------------------------------------------------------
+import base64
 try:
     import streamlit.elements.image as _st_image
-    if not hasattr(_st_image, "image_to_url"):
-        from streamlit.elements.lib.image_utils import image_to_url \
-            as _image_to_url
-        _st_image.image_to_url = _image_to_url
+
+    def _image_to_data_url(image, *_args, **_kwargs):
+        buf = io.BytesIO()
+        image.save(buf, format="PNG")
+        return ("data:image/png;base64,"
+                + base64.b64encode(buf.getvalue()).decode())
+
+    _st_image.image_to_url = _image_to_data_url
 except Exception:
     pass
 
