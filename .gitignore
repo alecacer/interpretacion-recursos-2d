@@ -1,0 +1,11 @@
+# Artefactos de Python
+__pycache__/
+*.pyc
+
+# Videos de demostración (se regeneran con make_demo_video.py)
+*.webm
+*.mp4
+
+# Archivos temporales
+_*.png
+_chk*.py

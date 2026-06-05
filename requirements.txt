@@ -1,0 +1,24 @@
+# App docente de interpretación geológica y recursos 2D — DIMIN USACH
+#
+# Instalación:  pip install -r requirements.txt
+# Ejecución:    streamlit run app.py   (o: python -m streamlit run app.py)
+#
+# Versiones probadas (Python 3.11, Windows 11):
+#   streamlit 1.44.1, streamlit-drawable-canvas 0.9.3, numpy 2.4.4,
+#   pandas 2.3.3, scipy 1.x, shapely 2.0.6, matplotlib 3.x, Pillow 10.4
+#
+# Nota: streamlit-drawable-canvas 0.9.3 requiere pandas < 3 (lo impone
+# streamlit) y app.py incluye un shim de compatibilidad para
+# streamlit >= 1.41 (API image_to_url).
+# Versión FIJA: streamlit-drawable-canvas es sensible a versiones
+# nuevas de Streamlit; 1.44.1 está probada con el shim de app.py
+streamlit==1.44.1
+streamlit-drawable-canvas>=0.9.3
+numpy>=1.24
+pandas>=2.0,<3
+scipy>=1.10
+shapely>=2.0
+matplotlib>=3.7
+Pillow>=9.0
+openpyxl>=3.1
+

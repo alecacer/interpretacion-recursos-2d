@@ -1,0 +1,11 @@
+# Tema corporativo — Departamento de Ingeniería en Minas, USACH
+# Colores tomados del logo de la plantilla PPTX:
+#   naranjo USACH  #EE7700  (línea divisora del logo)
+#   gris azulado   #37404A  (texto del logo)
+#   turquesa       #00A79A  (anillo del logo)
+[theme]
+base = "light"
+primaryColor = "#EE7700"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F6F8"
+textColor = "#37404A"
