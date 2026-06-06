@@ -506,6 +506,11 @@ inversionista la incertidumbre que usted experimentó al interpretar?
 ¿Qué rol deberían jugar los escenarios múltiples y la probabilidad de
 mineralización en la declaración de recursos, y qué riesgos ve en cada
 enfoque (parálisis por análisis vs falsa certeza)?
+
+> 💭 *«Puedo desarrollar la minería con lo que creo que tengo…
+> o puedo desarrollarla con lo que creo que tengo, cuantificando
+> además **cuánto no sé que tengo**. El yacimiento es el mismo —
+> las decisiones que tomaré sobre él, no.»*
 """)
 
     st.info("➡️ Para comenzar, vaya a la vista **🔍 Interpretar** y "
