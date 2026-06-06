@@ -454,6 +454,60 @@ if view == "📖 Instrucciones":
 - Descargue sus resultados como **Excel** (resumen, categorías,
   percentiles, polígonos y sondajes) para el informe.
 """)
+    # ----- Preguntas foco para el informe -----
+    st.divider()
+    st.markdown(f"""
+### ❓ Preguntas foco para el informe
+
+**P1 — El peso de la interpretación** *(vista 📊 Comparación)*
+Con los **mismos sondajes**, sus 5 escenarios reportan recursos
+distintos. Cuantifique: ¿cuál es el I90 relativo de tonelaje, ley y
+metal entre sus escenarios? ¿Qué controla más el recurso reportado: el
+método de estimación o la interpretación geológica? Justifique con su
+tabla P5/P50/P95.
+
+**P2 — ¿Basta la distancia para cuantificar la confianza?**
+*(vista 🎲 Incertidumbre)*
+Identifique en sus mapas: (a) bloques **Medido** (≤ {D['d_med']:.0f} m
+de un sondaje) que caen en zona incierta (p(1−p) > 0.1), y (b) bloques
+lejanos donde **todos** sus escenarios coinciden. ¿Es suficiente la
+distancia como criterio de confianza? ¿Qué **modificación concreta**
+propondría a la regla de categorización para incorporar la
+incertidumbre interpretativa? (p. ej., ¿degradaría un Medido que cae
+en zona incierta?)
+
+**P3 — El costo de la continuidad optimista**
+*(vistas 🔍 Interpretar y 📊 Comparación)*
+Genere al menos un escenario que **incorpore deliberadamente muestras
+de baja ley** dentro de la envolvente (interpretación continua /
+optimista). ¿Qué efecto observa en la ley media y el metal de ese
+escenario versus uno ajustado? ¿Por qué incluir estéril en el dominio
+"diluye" la estimación de todos los bloques interiores?
+(Pista: ¿con qué muestras se krigea adentro?)
+
+**P4 — La realidad como juez** *(vista 🔓 Realidad)*
+¿Cuál de sus escenarios se parece más a la realidad en forma y en
+números (Δ% Ton/Ley/Metal)? ¿Sus 5 escenarios fueron sistemáticamente
+optimistas o conservadores? En el mapa OO/OW/WO/WW: ¿domina la
+**dilución** (OW) o la **pérdida** (WO), y qué sondajes adicionales
+propondría para reducir ese error?
+
+**P5 — Determinismo vs incertidumbre: ¿un modelo único para
+reservas?** *(reflexión final)*
+En la práctica industrial es habitual construir **un único modelo
+geológico** ("el mejor") y sobre él estimar, categorizar y declarar
+reservas. Usted acaba de comprobar que, con la misma información,
+dibujó 5 interpretaciones plausibles con diferencias importantes en
+metal — y que la realidad no coincidió exactamente con ninguna.
+Reflexione: ¿qué opina de usar un modelo único y determinístico para
+efectos de reservas, cuando la información es incompleta por
+naturaleza? ¿Ese modelo único transmite al planificador y al
+inversionista la incertidumbre que usted experimentó al interpretar?
+¿Qué rol deberían jugar los escenarios múltiples y la probabilidad de
+mineralización en la declaración de recursos, y qué riesgos ve en cada
+enfoque (parálisis por análisis vs falsa certeza)?
+""")
+
     st.info("➡️ Para comenzar, vaya a la vista **🔍 Interpretar** y "
             "dibuje su primer escenario.")
 
